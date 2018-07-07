@@ -151,6 +151,9 @@ body {
           opacity: 1;
           display: block; }
 
-h1, h2, h3 {
+h1, h3 {
   margin: 0; }
+
+h2 {
+  margin: -.3em 0em 0em 0em; }
 
