@@ -15,7 +15,7 @@
     "gulp": "^3.9.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --history-api-fallback --inline --progress",
-    "build": "webpack"
+    "start": "webpack-dev-server --history-api-fallback --inline --progress --mode development",
+    "build": "webpack --mode production"
   }
 }

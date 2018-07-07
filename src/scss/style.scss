@@ -1,7 +1,8 @@
-$borders: #1c1c1c;
+$dark: #1c1c1c;
+$light:  #fcfcfc;
 
 body {
-    background-color: #fcfcfc;
+    background-color: $light;
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
     font-size: 2vw;
     color: #1c1c1c;
@@ -42,13 +43,21 @@ body {
 .sidebar {
   word-wrap: break-word;
   text-align: right;
-  width: 8em;
+  width: 8.5em;
   top: 4em;
   font-size: 1em;
   margin-right: 2em;
   
+  .name {
+      color: $light;
+      font-size: 0.7em;
+      padding: 0.2em 0 0.2em 0;
+      text-transform: uppercase;
+      letter-spacing: 0.5em;
+      background-color: $dark;
+  }
   .links {
-    font-size: 0.8em;
+    font-size: 0.65em;
   }
   
   a {
@@ -56,9 +65,9 @@ body {
   }
   
   .description {
-    margin-top: 0.5em;
+    margin-top: 1em;
     line-height: 1em;
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 }
 
@@ -93,7 +102,7 @@ body {
         right: 0em;
         border-style: solid;
         border-width: 0em 2em 1.5em 0em;
-        border-color: transparent $borders transparent transparent;
+        border-color: transparent $dark transparent transparent;
       }
 
       .arrow-top {
@@ -111,14 +120,14 @@ body {
   }
 
   .main {
-    background-color: $borders;
+    background-color: $dark;
     color: #e8e8e8;
     font-size: 0.9em;
     height: 50%;
     overflow: auto;
     top: 3.3em;
     padding: 2em;
-    border: 0.05em solid $borders;
+    border: 0.05em solid $dark;
 
     .well {
       height: 95%;
