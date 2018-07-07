@@ -1,6 +1,6 @@
 # personal site
 
-https://paulinalee.github.io &times; http://florachro.me/
+https://paulinalee.github.io &times; https://florachro.me/
 
 ## about
 personal showcase
