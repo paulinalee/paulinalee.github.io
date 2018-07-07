@@ -12,6 +12,7 @@ body {
 }
 
 #topbar {
+  display: none;
   width: 100%;
   position: absolute;
   top: 0;
@@ -150,7 +151,7 @@ body {
   .main {
     background-color: $dark;
     color: #e8e8e8;
-    font-size: 0.9em;
+    font-size: 0.85em;
     height: fit-content;
     min-height: 50%;
     max-height: 100%;
@@ -158,6 +159,9 @@ body {
     top: 3.3em;
     padding: 2em;
     border: 0.05em solid $dark;
+    text-align: justify;
+    // border-top-left-radius: 2em;
+    // border-bottom-right-radius: 2em;
 
     a {
         color: inherit;
