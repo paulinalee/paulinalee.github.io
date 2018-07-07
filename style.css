@@ -7,6 +7,9 @@ body {
     body {
       font-size: 16px; } }
 
+a:hover {
+  cursor: help; }
+
 #topbar {
   display: none;
   width: 100%;
@@ -49,6 +52,7 @@ body {
     padding: 0.2em 0 0.2em 0;
     text-transform: uppercase;
     letter-spacing: 0.5em;
+    margin-top: 0.5em;
     background-color: #131313; }
   .sidebar .links {
     font-size: 0.55em;
