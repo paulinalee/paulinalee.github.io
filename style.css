@@ -2,10 +2,15 @@ body {
   background-color: #fcfcfc;
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-size: 2vw;
-  color: #1c1c1c; }
+  height: 100%;
+  color: #1c1c1c;
+  margin: 0; }
   @media screen and (min-width: 900px) {
     body {
       font-size: 16px; } }
+  @media screen and (max-device-width: 450px) {
+    body {
+      font-size: 5vw; } }
 
 #bg-image {
   transition: 3s ease-in-out all;
@@ -35,18 +40,6 @@ a:hover {
 .main a:hover, .sidebar a:hover {
   opacity: 0.2; }
 
-#topbar {
-  display: none;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: black;
-  height: 5em; }
-  @media screen and (max-width: 900px) and (orientation: landscape) {
-    #topbar {
-      height: 3em; } }
-
 #credit {
   opacity: 0.6;
   font-size: 0.55em;
@@ -60,16 +53,15 @@ a:hover {
   top: 8%;
   left: 50%;
   display: flex;
-  height: 70%;
-  width: 43em;
+  height: 50%;
+  width: fit-content;
   opacity: 0;
   transition: 0.5s ease-in-out all; }
-  @media screen and (orientation: portrait) {
+  @media screen and (max-device-width: 450px) {
     #everything {
-      top: 15%; } }
-  @media screen and (max-width: 900px) and (orientation: landscape) {
-    #everything {
-      top: 30%; } }
+      width: 100%;
+      left: 0;
+      top: 0; } }
   #everything.show {
     opacity: 1; }
 
@@ -78,10 +70,16 @@ a:hover {
   text-align: right;
   width: 8.5em;
   top: 4em;
-  height: 50%;
+  height: fit-content;
   font-size: 1em;
   margin-right: 2em;
   margin-top: 1em; }
+  @media screen and (max-device-width: 450px) {
+    .sidebar {
+      top: 0;
+      margin-left: 1em;
+      position: fixed;
+      display: none; } }
   .sidebar .name {
     color: #fcfcfc;
     font-size: 0.7em;
@@ -104,6 +102,12 @@ a:hover {
   width: 23em;
   height: 50%;
   top: 4.4em; }
+  @media screen and (max-device-width: 450px) {
+    .content {
+      width: 90%;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%); } }
   .content .right {
     display: none;
     width: fit-content;

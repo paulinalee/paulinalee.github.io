@@ -1,5 +1,6 @@
 import './../scss/style.scss';
 import png from './../assets/mountains.jpg'
+import js from './../assets/zepto.min.js'
 
 $("#bg-image").addClass("activate");
 $("#everything").addClass("show");
