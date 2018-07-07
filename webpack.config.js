@@ -19,7 +19,15 @@ module.exports = {
             }, {
                 test: /\.pug$/,
                 loader: 'pug-loader'
-            }
+            }, {
+                test: /\.(gif|png|jpe?g|svg)$/i,
+                use: [{ loader:'file-loader',
+                    options: {
+                        outputPath: 'src/assets/',
+                        name: "[name].[ext]"
+                    }
+                }]
+            },
         ]
     },
     plugins: [

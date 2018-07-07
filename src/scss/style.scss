@@ -11,8 +11,28 @@ body {
     }
 }
 
+#bg-image{
+  transition:3s ease-in-out all;
+  width:100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  background-image:url("/src/assets/mountains.jpg");
+  background-size: cover;
+  opacity: 0;
+  z-index: -1;
+  &.activate{
+    opacity: 1;
+  }
+}
+
+a {
+  color: inherit;
+}
+
 a:hover {
-  cursor: help;
+  cursor: crosshair;
 }
 
 #topbar {
@@ -28,9 +48,18 @@ a:hover {
   }
 }
 
+#credit {
+  opacity: 0.6;
+  font-size: 0.55em;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.5em;
+}
+
 #everything {
   position: absolute;
-  top: 23%;
+  top: 8%;
   @media screen and (orientation:portrait) {
     top: 20%;
   }
@@ -38,11 +67,15 @@ a:hover {
     top: 40%;
   }
   left: 50%;
-  transform: translate(-50%);
+  // transform: translate(-50%);
   display: flex;
   height: 70%;
   width: 43em;
-  //background-color: red;
+  opacity: 0;
+  transition: 0.5s ease-in-out all;
+  &.show {
+    opacity: 1;
+  }
 }
 
 .sidebar {
@@ -67,12 +100,9 @@ a:hover {
   .links {
     font-size: 0.55em;
     text-align: justify;
+    margin-top: 0.3em;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-  }
-  
-  a {
-    color: inherit;
   }
   
   .description {
@@ -87,6 +117,7 @@ a:hover {
   height: 50%;
   top: 4.4em;
   .right {
+    display:none;
     width: fit-content;
     margin-left: 15em;
     top: 5em;
@@ -95,6 +126,7 @@ a:hover {
       margin-top: -2em;
       max-width: 10em;
       top: 0;
+      display:none;
       left: 0;
     }
     
@@ -142,7 +174,7 @@ a:hover {
       a.port {
           position: absolute;
           width: fit-content;
-          right: 0;
+          right: 0em;
           bottom: -0.1em;
           color: $light;
           background-color: $dark;
@@ -154,8 +186,8 @@ a:hover {
       }
   }
   .main {
-    background-color: $dark;
-    color: #e8e8e8;
+    background-color: rgba(252,252,252,0.3);
+    color:$dark;
     font-size: 0.85em;
     height: fit-content;
     min-height: 50%;
@@ -163,10 +195,8 @@ a:hover {
     overflow: auto;
     top: 3.3em;
     padding: 2em;
-    border: 0.05em solid $dark;
+    border: 0.05em dotted $dark;
     text-align: justify;
-    // border-top-left-radius: 2em;
-    // border-bottom-right-radius: 2em;
 
     a {
         color: inherit;

@@ -1,6 +1,10 @@
 import './../scss/style.scss';
+import png from './../assets/mountains.jpg'
 
+$("#bg-image").addClass("activate");
+$("#everything").addClass("show");
 $(".home").addClass("active");
+
 
 $(".tabs .port").click(() => {
     $(".portfolio").addClass("active");

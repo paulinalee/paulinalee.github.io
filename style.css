@@ -7,8 +7,25 @@ body {
     body {
       font-size: 16px; } }
 
+#bg-image {
+  transition: 3s ease-in-out all;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("/src/assets/mountains.jpg");
+  background-size: cover;
+  opacity: 0;
+  z-index: -1; }
+  #bg-image.activate {
+    opacity: 1; }
+
+a {
+  color: inherit; }
+
 a:hover {
-  cursor: help; }
+  cursor: crosshair; }
 
 #topbar {
   display: none;
@@ -22,20 +39,31 @@ a:hover {
     #topbar {
       height: 3em; } }
 
+#credit {
+  opacity: 0.6;
+  font-size: 0.55em;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.5em; }
+
 #everything {
   position: absolute;
-  top: 23%;
+  top: 8%;
   left: 50%;
-  transform: translate(-50%);
   display: flex;
   height: 70%;
-  width: 43em; }
+  width: 43em;
+  opacity: 0;
+  transition: 0.5s ease-in-out all; }
   @media screen and (orientation: portrait) {
     #everything {
       top: 20%; } }
   @media screen and (max-width: 900px) and (orientation: landscape) {
     #everything {
       top: 40%; } }
+  #everything.show {
+    opacity: 1; }
 
 .sidebar {
   word-wrap: break-word;
@@ -57,10 +85,9 @@ a:hover {
   .sidebar .links {
     font-size: 0.55em;
     text-align: justify;
+    margin-top: 0.3em;
     letter-spacing: 0.06em;
     text-transform: uppercase; }
-  .sidebar a {
-    color: inherit; }
   .sidebar .description {
     margin-top: 1em;
     line-height: 1em;
@@ -71,6 +98,7 @@ a:hover {
   height: 50%;
   top: 4.4em; }
   .content .right {
+    display: none;
     width: fit-content;
     margin-left: 15em;
     top: 5em;
@@ -79,6 +107,7 @@ a:hover {
       margin-top: -2em;
       max-width: 10em;
       top: 0;
+      display: none;
       left: 0; }
     .content .right .arrow {
       top: 0em;
@@ -113,7 +142,7 @@ a:hover {
     .content .tabs a.port {
       position: absolute;
       width: fit-content;
-      right: 0;
+      right: 0em;
       bottom: -0.1em;
       color: #fcfcfc;
       background-color: #131313;
@@ -123,8 +152,8 @@ a:hover {
       font-size: 0.6em;
       letter-spacing: 0.2em; }
   .content .main {
-    background-color: #131313;
-    color: #e8e8e8;
+    background-color: rgba(252, 252, 252, 0.3);
+    color: #131313;
     font-size: 0.85em;
     height: fit-content;
     min-height: 50%;
@@ -132,7 +161,7 @@ a:hover {
     overflow: auto;
     top: 3.3em;
     padding: 2em;
-    border: 0.05em solid #131313;
+    border: 0.05em dotted #131313;
     text-align: justify; }
     .content .main a {
       color: inherit; }
