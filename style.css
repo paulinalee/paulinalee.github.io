@@ -100,9 +100,9 @@ a:hover {
     letter-spacing: 0.06em;
     text-transform: uppercase; }
   .sidebar .description {
-    margin-top: 1em;
-    line-height: 1em;
-    font-size: 0.75em; }
+    margin-top: 0.2em;
+    line-height: 1.2em;
+    font-size: 0.7em; }
     @media screen and (max-device-width: 450px) {
       .sidebar .description {
         display: none; } }

@@ -3,7 +3,7 @@
 https://paulinalee.github.io &times; https://florachro.me/
 
 ## about
-personal showcase
+repo for personal site to practice using webpack
 
 ## development
 1. install node
