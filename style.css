@@ -51,7 +51,7 @@ a:hover {
 #everything {
   position: absolute;
   top: 8%;
-  left: 50%;
+  right: 12%;
   display: flex;
   height: 50%;
   width: fit-content;
@@ -62,6 +62,12 @@ a:hover {
       width: 100%;
       left: 0;
       top: 0; } }
+  @media screen and (max-device-width: 850px) and (orientation: landscape) {
+    #everything {
+      right: 0%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); } }
   #everything.show {
     opacity: 1; }
 
@@ -77,9 +83,9 @@ a:hover {
   @media screen and (max-device-width: 450px) {
     .sidebar {
       top: 0;
-      margin-left: 1em;
+      left: 1em;
       position: fixed;
-      display: none; } }
+      text-align: left; } }
   .sidebar .name {
     color: #fcfcfc;
     font-size: 0.7em;
@@ -97,6 +103,9 @@ a:hover {
     margin-top: 1em;
     line-height: 1em;
     font-size: 0.75em; }
+    @media screen and (max-device-width: 450px) {
+      .sidebar .description {
+        display: none; } }
 
 .content {
   width: 23em;
@@ -107,7 +116,8 @@ a:hover {
       width: 90%;
       position: absolute;
       left: 50%;
-      transform: translate(-50%); } }
+      transform: translate(-50%);
+      top: 6.8em; } }
   .content .right {
     display: none;
     width: fit-content;
