@@ -28,6 +28,15 @@ module.exports = {
                     }
                 }]
             },
+            {
+                test: /\.pdf$/i,
+                use: [{ loader:'file-loader',
+                    options: {
+                        outputPath: '/',
+                        name: "[name].[ext]"
+                    }
+                }]
+            }
         ]
     },
     plugins: [
