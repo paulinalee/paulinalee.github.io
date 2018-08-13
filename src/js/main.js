@@ -1,6 +1,6 @@
 import './../scss/style.scss';
 import png from './../assets/mountains.jpg'
-import pdf from './../../resumef18.pdf'
+import pdf from './../assets/resumef18.pdf'
 
 $("#bg-image").addClass("activate");
 $("#everything").addClass("show");

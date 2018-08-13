@@ -20,19 +20,10 @@ module.exports = {
                 test: /\.pug$/,
                 loader: 'pug-loader'
             }, {
-                test: /\.(gif|png|jpe?g|svg)$/i,
+                test: /\.(gif|png|jpe?g|svg|pdf)$/i,
                 use: [{ loader:'file-loader',
                     options: {
                         outputPath: 'src/assets/',
-                        name: "[name].[ext]"
-                    }
-                }]
-            },
-            {
-                test: /\.pdf$/i,
-                use: [{ loader:'file-loader',
-                    options: {
-                        outputPath: '/dist/',
                         name: "[name].[ext]"
                     }
                 }]
